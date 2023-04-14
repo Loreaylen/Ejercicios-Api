@@ -1,0 +1,158 @@
+/*FUENTES:
+font-family: 'Dongle', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+#present {
+  justify-content: space-evenly;
+  padding: 2% 0;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 5em;
+}
+
+#present h3 {
+  font-family: 'Dongle', sans-serif;
+  font-size: 2em;
+}
+
+#listSection {
+  width: 80%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+
+}
+
+
+#listSection article {
+  width: 15%;
+  padding: 20px;
+}
+
+#listSection article h2 {
+  padding-left: 20px;
+  border-bottom: 1px solid red;
+  font-family: 'Raleway', sans-serif;
+}
+
+#listSection article ul{
+padding: 10px 15px;
+}
+
+#listSection li {
+  font-family: 'Dongle', sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+#listSection li:before {
+  content: '🦴';
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+/*------------------------- MODAL */
+
+#modalWrapper {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(16, 16, 16, 0.7);
+  position: fixed;
+  top:0;
+  left:0;
+  display:none;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  animation: mostrarModal 0.5s;
+}
+
+@keyframes mostrarModal {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#modal {
+ background-color: white;
+ height: 700px;
+ width: 40%;
+ padding-top: 50px;
+ border-radius: 15px;
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: flex-start;
+ align-items: center;
+ position: relative;
+ animation: bajar 1s 0.5s backwards;
+}
+
+@keyframes bajar {
+  0% {
+    transform: translateY(-150vh);
+  }
+}
+
+#modalBtn {
+  position:absolute;
+  height: 30px;
+  width: 30px;
+  top: 7px;
+  right: 7px;
+  border-radius: 20px;
+  background-color: transparent;
+  font-size: 20px;
+  border: 2px solid rgb(155, 41, 41);
+  color: rgb(155, 41, 41);
+}
+
+#modalTitle{
+  font-family: 'Dongle', sans-serif;
+  font-size: 3em;
+}
+
+#modalImgCtn {
+  max-width: 80%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#modalImg {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto; 
+}
+
